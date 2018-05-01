@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    .main.container
+        h1 Quiz
+        .col-md-8
+            form(method='POST' action='/result')
+                each val,index in data
+                    label.question # #{index+1}
+                        span= val.ques
+                    div.ans.form-group
+                        .col-md-2
+                           label(for="element_"+index) Yes
+                        .col-md-4   
+                            input.form-control(type='radio' name='ans['+index+']' value="yes" id="element_"+index)
+                        .col-md-2 
+                            label(for="element_"+index) NO    
+                        .col-md-4  
+                            input.form-control(type='radio' name='ans['+index+']' value="no" id="element_"+index)
+                input(type='hidden' name="test" value=data)
+                input.btn.btn-primary(type="submit" onclick="abc()")          
+    script.
+          
+        function abc() {
+            console.log("hello")  
+        }                       

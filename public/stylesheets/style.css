@@ -1,0 +1,21 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+input.btn.btn-primary {
+  float: right;
+  margin-top: 30px;
+}
+label.question {
+  margin-top: 10px;
+}
+span{
+  margin: 10px;
+}
+.ans.form-group {
+    margin-left: 20px;
+}
